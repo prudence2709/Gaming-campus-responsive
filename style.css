@@ -1,0 +1,479 @@
+:root{
+   --color1: rgb(247, 246, 246);
+   --color2: rgb(41, 39, 39);
+   --color3: rgb(197, 195, 195);
+   --color4:  rgb(76, 3, 145);
+   --color5: black;
+   --white: white;
+}
+@font-face {
+    font-family: "Montserrat", sans-serif;
+    src: url(./assets/fonts/Montserrat-Medium.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+}
+body{
+    background: var(--color1);
+    text-align: center;
+ 
+}
+button{
+    text-transform: uppercase;
+   padding: 10px 20px;
+   font-size: 0.6rem;
+   font-weight: 400;
+   letter-spacing: 2px;
+   border: 1px solid var(--color1);
+   color: var(--color1);
+   background: transparent;
+   cursor: pointer;
+   transition: 0.4s ease-in-outm;
+}
+button:hover{
+    color: var(--color2);
+    background: var(--color3);
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* **************** NAV : NAVIGATION *********************** */
+nav{
+    
+    background: var(--color1);
+    min-width: 110px;
+    /* border: 1px solid red; */
+}
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav ul li{
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+    padding: 20px 0;
+    transition: 0.3s ease;
+}
+#btn-nav{
+    background:var(--color3);
+    padding: 5px;
+    border-radius: 25px;
+    width: 50px;
+    text-align: center;
+}
+.acceuil{
+    color: var(--color4);
+
+}
+.acceuil::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    /* width: 42px; */
+    width: 100%;
+    background: var(--color4);
+    top: 1px;
+    font-weight: bold;
+}
+nav ul li:hover::before{
+    content: "";
+    position: absolute;
+    height: 4px;
+    /* width: 42px; */
+    width: 100%;
+    background: var(--color4);
+    top: 1px;
+}
+nav li:last-child:hover:before{
+    background: transparent;
+}
+
+/* ***************** HEADER ****************** */
+header{
+    background: url(./assets/img/bg.jpg) fixed center/cover;
+    /* height: 40vh; */
+    padding: 70px;
+    /* margin-bottom: 95px; */
+}
+.landing-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color1);
+    margin-bottom: 60px;
+    
+}
+/* .landing-page-container img{
+   width: 400px;
+} */
+.landing-page-container h1{
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 30px 0 35px;
+}
+
+/* pour décaler un element i dans sa boite */
+.landing-page-container i{
+    transform: translateX(7px);
+}
+
+.text-header{
+    display: flex;
+    align-items: center;
+     margin: 0 auto;
+    line-height: 34px;
+    font-size: 1.2rem;
+    padding: 45px 0;
+    max-width: 1100px;
+}
+/* ***************** MAIN SECTION 1 : GAMING OPTION*************** */
+.gamingOptions{
+    padding: 65px 0;
+    background: var(--color5);
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.gamingOption-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1100px;
+}
+.gamingOption{
+    margin: 15px;
+    width: 200px;
+}
+.gamingOption-imgcontainer img{
+    width: 150px;
+    margin-bottom: 30px;
+}
+.gamingOption h3{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+.gamingOption p{
+    font-size: 0.7rem;
+    margin-bottom: 25px;
+    font-weight: 100;
+}
+/* ********************* MAIN SECTION2 : INFO ************************ */
+.info{
+   
+    background: var(--color3);
+    padding: 80px 0 45px;
+}
+.text-info{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.text-info-container h2{
+text-align: left;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+
+}
+.text-info-container p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+}
+.btn-info-container button{
+    color: var(--color5);
+    font-weight: 600;
+    border-color: var(--color5);
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    transition: 0.2s ease-in-out;
+    outline: none;
+}
+.btn-info-container button:hover{
+    color: var(--color1);
+    background: var(--color5);
+}
+.actualites{
+    /* border: 1px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   max-width: 1100px;
+   margin: 45px auto;
+}
+.actualite{
+    /* border: 1px solid red; */
+    margin: 10px;
+    text-align: left;
+    max-width: 30%;
+    
+    position: relative;
+}
+.actualite h5{
+    padding: 10px 0;
+    width: 80%;
+}
+.actualite p{
+    margin-bottom:45px ;
+    font-size: 0.7rem;
+    line-height: 20px;
+    width: 70%;
+}
+.actualite a{
+    color: var(--color4);
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+}
+.actualite a:hover{
+    color: var(--color1);
+}
+.actualite-imgcontainer img{
+    width: 80%;
+    object-fit: cover;
+}
+/* *************************** SECTION :INFOS ************************* */
+.info-contact{
+    padding: 65px 0 45px;
+    background: var(--white);
+ 
+}
+.info-contact-container{
+    display: flex;
+   
+    justify-content: space-between;
+    font-weight: 600;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0;
+}
+.list{
+    margin: 0 5px;  
+    max-width: 24%;
+    font-size: 0.6rem;
+    text-align: left;
+}
+ .img-gaming-campus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-gaming-campus img{
+    width: 100px;
+}
+
+.list h3{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.infopratique li{
+margin: 15px 0;
+}
+.list a{
+    color: var(--color4);
+}
+.list p{
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+.list h6{
+    font-size: 0.6rem;
+    margin-bottom: 8px;
+}
+.iconRS i{
+    font-size: 0.8rem;
+    margin: 0 12px 15px 0;
+}
+.contact p{
+    margin: 0;
+}
+
+
+.trait-horizintal{
+    height: 1px;
+    width: 70%;
+    margin: 30px auto;
+    background: var(--color3);
+}
+.fansclub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+.fansclub-title h5{
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+.fansclub-title p{
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding-top: 10px;
+}
+.fansclub-logo span{
+    padding: 0 5px;
+}
+.fansclub-logo span img{
+    width: 50px;
+} 
+/* ******************* FOOTER ************************* */
+footer{
+    height: 10vh;
+    color: var(--color1);
+    background: var(--color2);
+}
+footer h3{
+    padding: 10px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+footer ul li{
+    /* font-size: 0.8rem; */
+    padding: 0 15px;
+    
+}
+footer ul li img{
+    max-width: 50px;
+    max-height: 35px;
+}
+
+/* media queries */
+@media screen and (max-width : 770px) {
+    footer ul li{
+        /* font-size: 0.8rem; */
+        padding: 0 5px;
+        
+    }
+    footer ul li img{
+        max-width: 40px;
+        max-height: 25px;
+    }
+}
+
+@media  screen and (max-width : 700px) {
+    nav ul li{
+        font-size: 0.5rem;
+    }
+    .gamingOption-container{
+        max-width: 700px;
+    }
+    .gamingOption{
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .fansclub-logo span{
+        padding: 0 5px;
+    }
+    .fansclub-logo span img{
+        width: 35px;
+    } 
+    footer ul{
+        flex-wrap: wrap;
+    }
+}
+@media  screen and (max-width: 520px) {
+    nav ul{
+        display: none;
+    }
+    .landing-page-container h1{
+        font-weight: 500;
+        font-size: rem;
+    }
+    .landing-page img{
+        width: 80%;
+    }
+    .info-contact{
+        display: none;}
+    .text-info-container{
+        width: 60%;
+        text-align: center;
+    }
+    .btn-info-container{
+        width: 40%;
+    }
+   
+}
+@media  screen and (max-width: 450px){
+    .gamingOptions{
+        padding: 0;
+    }
+    .gamingOption-container{
+        display: block;
+    }
+    .gamingOption{
+        width: 90%;
+        margin-top: 0;
+        padding: 0 0 30px;
+
+    }
+    .gamingOption-imgcontainer img{
+        margin-bottom: 5px;
+    }
+    .text-info{
+       flex-direction: column;
+       
+    }
+    .text-info-container{
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .text-info-container p{
+        text-align: center;
+    }
+    .actualites{
+        flex-direction: column;
+    }
+    .actualite{
+        max-width: 90%;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .actualite p{
+        margin: 0 auto;
+    }
+    .actualite a{
+        margin-bottom: -20px;
+    }
+
+}
